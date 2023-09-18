@@ -1,0 +1,14 @@
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\RpgTurno.exe
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\RpgTurno.deps.json
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\RpgTurno.runtimeconfig.json
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\RpgTurno.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\RpgTurno.pdb
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.AssemblyInfoInputs.cache
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.AssemblyInfo.cs
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.csproj.CoreCompileInputs.cache
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\refint\RpgTurno.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.pdb
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.genruntimeconfig.cache
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\ref\RpgTurno.dll
