@@ -7,10 +7,10 @@ namespace RpgTurno
         static void Main(string[] args)
         {
             // Player
-            Player jogador = new Player(100f, 10, 5);
+            Player jogador = new Player(100f, 0, 10);
 
             // Inimigos
-            Inimigo mob1 = new Inimigo(100, 12, 10, 0, 0);
+            Inimigo mob1 = new Inimigo(100, 100, 10, 0, 0);
             Inimigo mob2 = new Inimigo(50, 15, 8, 0, 25);
             Inimigo mob3 = new Inimigo(50, 12, 8, 15, 0);
 
@@ -20,7 +20,7 @@ namespace RpgTurno
             // Armas
             Arma vampire = new Arma(12);
             Arma gladius = new Arma(19);
-            Arma force = new Arma(15);
+            Arma force = new Arma(50);
 
             // Jogo
             while (jogador.playerHp > 0)
@@ -45,7 +45,7 @@ namespace RpgTurno
 
                 Console.Write("Digite V para Vampire, G para Gladius e F para Force: ");
                 string arma = Console.ReadLine();
-                arma.ToUpper();
+                arma = arma.ToUpper();
 
                 if(arma == "")
                 {
@@ -53,7 +53,6 @@ namespace RpgTurno
                 }
 
                 Console.WriteLine();
-                arma.ToUpper();
 
                 if (arma == "V")
                 {
@@ -71,7 +70,7 @@ namespace RpgTurno
                 Console.WriteLine();
                 Console.WriteLine("Começa a batalha");
                 Console.WriteLine();
-
+                Console.WriteLine(jogador.playerAtk);
                 while (jogador.playerHp > 0 && mob1.inimigoHp > 0)
                 {
                     Console.WriteLine("Player Hp: " + jogador.playerHp.ToString("F1") + " | Enemys Hp is: " + mob1.inimigoHp);
@@ -85,11 +84,13 @@ namespace RpgTurno
                         escolha = "A";
                     }
 
+                    escolha = escolha.ToUpper();
+
                     Console.WriteLine();
 
-                    if (escolha == "a" || escolha == "A")
+                    if (escolha == "A")
                     {
-                        if (arma == "V" || arma == "v")
+                        if (arma == "V")
                         {
                             mob1.removeHp(jogador.playerAtk);
                             Console.WriteLine("Player atacou inimigo e causou = " + jogador.playerAtk + " de dano");
@@ -97,7 +98,7 @@ namespace RpgTurno
                             Console.WriteLine();
                             jogador.addHp(2.3f);
                         }
-                            else if (arma == "F" || arma == "f")
+                            else if (arma == "F")
                             {
                             mob1.removeHp(jogador.playerAtk);
                             Console.WriteLine("Player atacou inimigo e causou = " + jogador.playerAtk + " de dano");
@@ -116,7 +117,7 @@ namespace RpgTurno
                             Console.WriteLine();
                             }
 
-                            else if(arma == "G" || arma == "g")
+                            else if(arma == "G")
                             {
                                 mob1.removeHp(jogador.playerAtk);
                                 Console.WriteLine("Player atacou inimigo e causou = " + jogador.playerAtk + " de dano");
@@ -155,17 +156,22 @@ namespace RpgTurno
                         if (enemyChoice == 1)
                         {
                             jogador.removeHp(mob1.inimigoAtk);
-                            Console.WriteLine("Enemys Atack and deals = " + mob1.inimigoAtk + " damage");
+                            Console.WriteLine("Inimigo atacou e causou = " + mob1.inimigoAtk + " dano");
                             Console.WriteLine();
                         }
                         else
                         {
                             mob1.addHp();
-                            Console.WriteLine("Enemys curou : " + mob1.inimigoCure + " hp");
+                            Console.WriteLine("Inimigo curou : " + mob1.inimigoCure + " hp");
                             Console.WriteLine();
                         }
                     }
 
+                }
+
+                if (jogador.playerHp <= 0)
+                {
+                    break;
                 }
 
                 Console.Clear();
@@ -187,6 +193,15 @@ namespace RpgTurno
                     {
                         jogador.playerHp = 0;
                         break ;
+                    }
+
+                    if (mob2.inimigoHp <= 0)
+                    {
+                        mob2.inimigoHp = 0;
+                    }
+                    else if (mob3.inimigoHp <= 0)
+                    {
+                        mob3.inimigoHp = 0;
                     }
 
                     Console.WriteLine("-------------------------------------------------------------------------------------------------------------------------");
@@ -232,6 +247,12 @@ namespace RpgTurno
                                     {
                                         Console.WriteLine("Você deu 12 de dano critico!!");
 
+                                    }
+                                    else if (arma == "G" || arma == "g")
+                                    {
+                                        mob1.removeHp(jogador.playerAtk);
+                                        Console.WriteLine("Player atacou inimigo e causou = " + jogador.playerAtk + " de dano");
+                                        Console.WriteLine();
                                     }
                                     else
                                     {
@@ -289,7 +310,12 @@ namespace RpgTurno
                                 }
                                 Console.WriteLine();
                             }
-
+                            else if (arma == "G" || arma == "g")
+                            {
+                                mob1.removeHp(jogador.playerAtk);
+                                Console.WriteLine("Player atacou inimigo e causou = " + jogador.playerAtk + " de dano");
+                                Console.WriteLine();
+                            }
                             else
                             {
                                 mob3.removeHp(jogador.playerAtk);
@@ -318,14 +344,14 @@ namespace RpgTurno
                         if (enemyChoice == 1)
                         {
                             jogador.removeHp(mob2.inimigoAtk);
-                            Console.WriteLine("Enemys Atack and deals = " + mob2.inimigoAtk + " damage");
+                            Console.WriteLine("Inimigo atacou e causou = " + mob2.inimigoAtk + " dano");
                             Console.WriteLine();
                         }
                         else if (enemyChoice == 2)
                         {
                             Console.WriteLine(mob2.inimigoCure);
                             mob2.addHp();
-                            Console.WriteLine("Enemys heals : " + mob2.inimigoCure + " hp");
+                            Console.WriteLine("Inimigo curou : " + mob2.inimigoCure + " hp");
                             Console.WriteLine();
                         }
                         else
@@ -344,13 +370,13 @@ namespace RpgTurno
                         if (enemyChoice == 1)
                         {
                             jogador.removeHp(mob3.inimigoAtk);
-                            Console.WriteLine("Enemys Atack and deals = " + mob3.inimigoAtk + " damage");
+                            Console.WriteLine("Inimigo atacou e causou = " + mob3.inimigoAtk + " dano");
                             Console.WriteLine();
                         }
                         else if (enemyChoice == 2)
                         {
                             mob3.addHp();
-                            Console.WriteLine("Enemys heals : " + mob3.inimigoCure + " hp");
+                            Console.WriteLine("Inimigo curou : " + mob3.inimigoCure + " hp");
                             Console.WriteLine();
                         }
                         else
@@ -384,15 +410,23 @@ namespace RpgTurno
                 if (jogador.playerHp < 0)
                 {
                     Console.WriteLine();
-                    Console.WriteLine("Player Hp: 0" + "| MOB1 Hp is: " + mob2 + " | MOB2 Hp is: " + mob3);
+                    Console.WriteLine("Player Hp: 0" + "| MOB1 Hp: " + mob2 + " | MOB2 Hp: " + mob3);
                     Console.WriteLine();
                     Console.WriteLine("GAME OVER");
                 }
 
             }
 
+            if(jogador.playerHp <= 0 && mob2.inimigoHp == 50 && mob3.inimigoHp == 50)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Player Hp: 0" + "| MOB1 Hp : " + mob1.inimigoHp);
+                Console.WriteLine();
+                Console.WriteLine("GAME OVER");
+            }
+
             Console.WriteLine();
-            Console.WriteLine("Player Hp: 0" + "| MOB1 Hp is: " + mob2.inimigoHp + " | MOB2 Hp is: " + mob3.inimigoHp);
+            Console.WriteLine("Player Hp: 0" + "| MOB1 Hp: " + mob2.inimigoHp + " | MOB2 Hp: " + mob3.inimigoHp);
             Console.WriteLine();
             Console.WriteLine("GAME OVER");
         }

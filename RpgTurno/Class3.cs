@@ -10,8 +10,6 @@ namespace RpgTurno
     internal class Arma
     {
         public int ArmaDamage;
-        private float armaHablidade;
-
         public Arma(int ArmaDamage)
         {
             this.ArmaDamage = ArmaDamage;
