@@ -23,16 +23,15 @@ namespace RpgTurno
             this.inimigoCritico = inimigoCritico;
         }
 
-        public int removeHp(int damage)
+        public void removeHp(int damage)
         {
-            return inimigoHp -= damage;
+           this.inimigoHp -= damage;
         }
 
 
-        public int addHp(int cure)
+        public int addHp()
         {
-            int inimigoAddHp = inimigoHp += cure;
-            return inimigoAddHp;
+            return inimigoHp += inimigoCure;
         }
     }
 }
