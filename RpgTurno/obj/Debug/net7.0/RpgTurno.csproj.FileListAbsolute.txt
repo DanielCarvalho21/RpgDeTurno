@@ -12,3 +12,11 @@ C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\refint\RpgTurno.d
 C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.pdb
 C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.genruntimeconfig.cache
 C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\ref\RpgTurno.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\NAudio.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\NAudio.Asio.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\NAudio.Core.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\NAudio.Midi.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\NAudio.Wasapi.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\bin\Debug\net7.0\NAudio.WinMM.dll
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.csproj.AssemblyReference.cache
+C:\Users\danie\source\repos\RpgTurno\RpgTurno\obj\Debug\net7.0\RpgTurno.csproj.CopyComplete

@@ -23,6 +23,11 @@ namespace RpgTurno
             Arma force = new Arma(15);
             Arma Hack = new Arma(9999);
 
+            BackgroundMusicPlayer backgroundMusicPlayer = new BackgroundMusicPlayer();
+            string filePath = @"C:\Users\danie\Music\Adventure Royalty Free Medieval Fantasy Music [TubeRipper.com].mp3";
+            backgroundMusicPlayer.PlayBackgroundMusic(filePath);
+
+
             Console.Write("Bem vindo ao mini game Rpg de turno, para ler um breve tutorial, digite 1, para jogar direto 2: ");
             string Jogatutorial = Console.ReadLine();
             if(Jogatutorial == "1")
@@ -89,7 +94,7 @@ namespace RpgTurno
                 Console.WriteLine();
                 while (jogador.playerHp > 0 && mob1.inimigoHp > 0)
                 {
-                    Console.WriteLine("Player Hp: " + jogador.playerHp.ToString("F1") + " | Enemys Hp is: " + mob1.inimigoHp);
+                    Console.WriteLine("Player Hp: " + jogador.playerHp.ToString("F1") + " | Inimigo Hp: " + mob1.inimigoHp);
                     Console.WriteLine("--- Seu turno!!---");
 
                     Console.WriteLine("Digite A para atacar e H para recuperar hp");
@@ -229,7 +234,7 @@ namespace RpgTurno
 
                     Console.WriteLine("-------------------------------------------------------------------------------------------------------------------------");
                     Console.WriteLine();
-                    Console.WriteLine("Player Hp: " + jogador.playerHp.ToString("F1") + " | MOB1 Hp is: " + mob2.inimigoHp + " | MOB2 Hp is: " + mob3.inimigoHp);
+                    Console.WriteLine("Player Hp: " + jogador.playerHp.ToString("F1") + " | Mob1 Hp: " + mob2.inimigoHp + " | MOB2 Hp is: " + mob3.inimigoHp);
                     Console.WriteLine("--- Seu turno!!---");
                     Console.WriteLine();
 
@@ -411,7 +416,7 @@ namespace RpgTurno
                         else
                         {
                             mob3.addCurePlus();
-                            Console.WriteLine("Mob 2 usou grande cura e curou " + mob3.inimigoBigCure + " hp");
+                            Console.WriteLine("Mob2 usou grande cura e curou " + mob3.inimigoBigCure + " hp");
                             Console.WriteLine();
                         }
                     }
@@ -423,14 +428,14 @@ namespace RpgTurno
             if (jogador.playerHp <= 0 && mob2.inimigoHp == 50 && mob3.inimigoHp == 50)
             {
                 Console.WriteLine();
-                Console.WriteLine("Player Hp: 0" + "| MOB1 Hp : " + mob1.inimigoHp);
+                Console.WriteLine("Player Hp: 0" + "| Mob1 Hp : " + mob1.inimigoHp);
                 Console.WriteLine();
                 Console.WriteLine("GAME OVER");
             }
             else if(jogador.playerHp <= 0 && mob2.inimigoHp >= 0 || mob3.inimigoHp >= 0)
             {
                 Console.WriteLine();
-                Console.WriteLine("Player Hp: 0" + "| MOB1 Hp: " + mob2.inimigoHp + " | MOB2 Hp: " + mob3.inimigoHp);
+                Console.WriteLine("Player Hp: 0" + "| Mob1 Hp: " + mob2.inimigoHp + " | Mob2 Hp: " + mob3.inimigoHp);
                 Console.WriteLine();
                 Console.WriteLine("GAME OVER");
             }
