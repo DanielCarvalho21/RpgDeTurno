@@ -23,6 +23,18 @@ namespace RpgTurno
             Arma force = new Arma(15);
             Arma Hack = new Arma(9999);
 
+            Console.Write("Bem vindo ao mini game Rpg de turno, para ler um breve tutorial, digite 1, para jogar direto 2: ");
+            string Jogatutorial = Console.ReadLine();
+            if(Jogatutorial == "1")
+            {
+                Console.Clear();
+                string tutorial = "Bem-vindo ao RPG de Turno - Tutorial Rápido\r\n\r\nObjetivo:\r\n- O objetivo do jogo é derrotar todos os inimigos e avançar nos 2 níveis.\r\n\r\nControles:\r\n- Para atacar, pressione a tecla 'A'.\r\n- Para curar, pressione a tecla 'H'.\r\n- Para escolher uma arma, digite 'V' para Adaga Vampire, 'G' para Espada Gladius e 'F' para Adaga Force.\r\n\r\nBatalha:\r\n- Cada turno consiste em seu movimento e o turno do inimigo.\r\n- Durante o seu turno, você pode atacar ou curar. Escolha com sabedoria!\r\n- Use ataques para reduzir os pontos de vida (HP) do inimigo.\r\n- Use curas para restaurar seus próprios pontos de vida (HP).\r\n- Algumas armas têm habilidades especiais, como roubar vida ou causar dano crítico.\r\n\r\nInimigos:\r\n- Existem vários inimigos diferentes, cada um com pontos de vida (HP), ataques e habilidades únicas.\r\n- Derrote todos os inimigos para progredir para o próximo nível.\r\n\r\nNíveis:\r\n- O jogo é dividido em 2 níveis. Cada nível apresenta desafios mais difíceis.\r\n\r\nVitória e Derrota:\r\n- Você vence quando derrota todos os inimigos nos dois níveis.\r\n- Você perde se seus pontos de vida (HP) chegarem a zero.\r\n\r\n(Pressione qualquer tecla para sair) Você está pronto para enfrentar os desafios deste RPG de turno! Boa sorte e divirta-se!";
+                Console.WriteLine(tutorial);
+                Console.ReadKey();
+            }
+
+            Console.Clear();
+
             // Jogo
             while (jogador.playerHp > 0)
             {
