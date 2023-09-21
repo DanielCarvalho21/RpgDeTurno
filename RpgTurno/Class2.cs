@@ -28,10 +28,14 @@ namespace RpgTurno
            this.inimigoHp -= damage;
         }
 
-
         public int addHp()
         {
             return inimigoHp += inimigoCure;
+        }
+
+        public int addCurePlus()
+        {
+            return inimigoHp += inimigoBigCure;
         }
     }
 }
