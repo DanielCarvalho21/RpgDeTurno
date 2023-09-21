@@ -200,11 +200,11 @@ namespace RpgTurno
                         break;
                     }
 
-               //*     if(mob2.inimigoHp <= 0 && mob3.inimigoHp <= 0)
-                 //   {
-                //        jogador.playerHp = 0;
-                //        break ;
-               //*     }
+                   if(mob2.inimigoHp <= 0 && mob3.inimigoHp <= 0)
+                   {
+                       jogador.playerHp = 0;
+                        break ;
+                   }
 
                     if (mob2.inimigoHp <= 0)
                     {
@@ -422,9 +422,10 @@ namespace RpgTurno
                 Console.WriteLine();
                 Console.WriteLine("GAME OVER");
             }
-            else if(jogador.playerHp >= 0 && mob2.inimigoHp <=0 && mob3.inimigoHp <= 0)
+
+            if (mob1.inimigoHp <= 0 && mob2.inimigoHp <= 0 && mob3.inimigoHp <= 0)
             {
-                Console.WriteLine("Fim de jogo!!Você ganhou");
+                Console.WriteLine("Parabéns! Você derrotou todos os inimigos e venceu o jogo!");
             }
         }
     }
