@@ -124,9 +124,9 @@ namespace RpgTurno
                             mob1.removeHp(jogador.playerAtk);
                             Console.WriteLine("Player atacou inimigo e causou = " + jogador.playerAtk + " de dano");
 
-                            int receba = force.Critico();
-                            mob1.removeHp(receba);
-                            if (receba == 12)
+                            int criticoChance = force.Critico();
+                            mob1.removeHp(criticoChance);
+                            if (criticoChance == 12)
                             {
                                 Console.WriteLine("Você deu 12 de dano critico!!");
                                
@@ -220,6 +220,7 @@ namespace RpgTurno
                    if(mob2.inimigoHp <= 0 && mob3.inimigoHp <= 0)
                    {
                        jogador.playerHp = 0;
+
                         break ;
                    }
 
