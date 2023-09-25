@@ -11,7 +11,7 @@ namespace RpgTurno
             Player jogador = new Player(100f, 0, 10);
 
             // Inimigos
-            Inimigo mob1 = new Inimigo(100, 12, 10, 0, 0);
+            Inimigo mob1 = new Inimigo(100, 16, 10, 0, 0);
             Inimigo mob2 = new Inimigo(50, 15, 8, 0, 25);
             Inimigo mob3 = new Inimigo(50, 12, 8, 15, 0);
 
